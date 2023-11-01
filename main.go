@@ -66,7 +66,7 @@ func main() {
 		&cli.StringFlag{
 			Name:  "ua",
 			Usage: "the user-agent used to send request",
-			Value: "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.1.2.3\r\nProxy: UP",
+			Value: "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.1.2.3",
 		},
 		&cli.StringSliceFlag{
 			Name:    "header",
@@ -165,7 +165,7 @@ func Action(c *cli.Context) error {
 	if bufSize < 512 || bufSize > 1024000 {
 		return fmt.Errorf("inproper buffer size, 512~1024000")
 	}
-	header = append(header, "User-Agent: "+ua)
+	header = append(header, "User-Agent: "+ua, "Proxy: UP")
 
 	config := &ctrl.Suo5Config{
 		Listen:           listen,
