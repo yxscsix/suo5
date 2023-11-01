@@ -66,8 +66,7 @@ func main() {
 		&cli.StringFlag{
 			Name:  "ua",
 			Usage: "the user-agent used to send request",
-			Value: "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.1.2.3
-			Proxy: UP",
+			Value: "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.1.2.3\r\nProxy: UP",
 		},
 		&cli.StringSliceFlag{
 			Name:    "header",
